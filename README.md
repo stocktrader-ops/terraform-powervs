@@ -9,7 +9,3 @@ Use this terraform to create workspace. Workspace is needed to create server ins
 "zone" - "Zone of Service syd05" 
 "resource_group" - "Resource group name"
 "workspace_name" - "Power VS workspace name name"
-"workspace_location" {
-  description = "Power VS workspace location"
-  default = "syd05"
-}
