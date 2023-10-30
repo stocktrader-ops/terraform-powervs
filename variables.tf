@@ -27,8 +27,3 @@ variable "workspace_name" {
   default = "powervs-workspace"
 }
 
-variable "workspace_location" {
-  description = "Power VS workspace location"
-  default = "syd05"
-}
-
