@@ -11,9 +11,9 @@ resource "ibm_resource_instance" "power-iaas_instance" {
   name              = var.workspace_name
   service           = "power-iaas"
   plan              = "power-virtual-server-group"
-  location          = var.workspace_location
+  location          = var.zone
   resource_group_id = data.ibm_resource_group.resource_group.id
-#  tags              = ["terratest", "gas"]
+  tags              = ["created from catalog"]
 
   //User can increase timeouts
   timeouts {
