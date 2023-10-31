@@ -1,6 +1,3 @@
-resource "random_id" "name1" {
-  byte_length = 2
-}
 # resource group
 data "ibm_resource_group" "resource_group" {
   name = var.resource_group
@@ -38,14 +35,14 @@ data "ibm_pi_key" "data_source_key" {
   pi_cloud_instance_id = data.ibm_resource_instance.power-iaas_instance.guid
   pi_key_name          = var.ssh_key_name
 }
-resource "ibm_pi_network" "network" {
-  pi_cloud_instance_id = data.ibm_resource_instance.power-iaas_instance.guid
-  pi_network_name      = "${var.network_name}-${random_id.name1.hex}"
-  pi_network_type      = var.network_type
-  count                = var.network_count
-}
+# data "ibm_pi_network" "network" {
+#   pi_cloud_instance_id = data.ibm_resource_instance.power-iaas_instance.guid
+#   pi_network_name      = "public_net"
+
+# }
+
 data "ibm_pi_public_network" "data_source_network" {
-  depends_on = [ibm_pi_network.network]
+#  depends_on = [ibm_pi_network.network]
   pi_cloud_instance_id = data.ibm_resource_instance.power-iaas_instance.guid
 }
 # # # resource "ibm_pi_volume" "volume" {
