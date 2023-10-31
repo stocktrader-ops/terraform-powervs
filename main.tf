@@ -1,6 +1,3 @@
-resource "random_id" "name1" {
-  byte_length = 2
-}
 # resource group
 data "ibm_resource_group" "resource_group" {
   name = var.resource_group
