@@ -27,3 +27,19 @@ variable "workspace_name" {
   default = "powervs-workspace"
 }
 
+variable "workspace_tags" {
+  description = "List of Tag names for IBM Cloud PowerVS workspace."
+  type        = list(string)
+  default =   [ "created from catalog" ]
+}
+
+variable "pi_image_names" {
+  description = "List of images to be imported into cloud account from catalog images. Supported values can be found [here](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-workspace/blob/main/docs/catalog_images_list.md)"
+  type        = list(string)
+  default     = ["RHEL8-SP6", "SLES15-SP4", "7300-01-01"]
+}
+variable "pi_public_subnet_enable" {
+  description = "IBM Cloud PowerVS Public Network. Set to true to enable this."
+  type        = bool
+  default     = true
+}

@@ -1,6 +1,7 @@
 # Terraform to create Power System Virtual Server workspace in IBM Cloud
 
 Use this terraform to create workspace. Workspace is needed to create server instances.
+Based on this sample - https://github.com/terraform-ibm-modules/terraform-ibm-powervs-workspace/blob/main/modules/pi-workspace/
 
 ## Params
 
